@@ -1,0 +1,52 @@
+<h3>Minha Playlist</h3>
+
+<p class="contador">
+    {{musicas.length}} Musicas na Playlist
+</p>
+
+
+ <div class = "lista-musicas">
+    @for(musica of musicas; track musica){
+
+        <button class="musica" 
+        [class.selecionada] = "musica == musicaSelecionada"
+        (click)="selecionarMusica(musica)"> 
+        {{musica}}
+    </button>
+    } 
+</div>
+
+
+@if(musicaSelecionada){
+
+    <div class = "musica-selecionada" 
+    [class.tocando] = 'tocando'>
+
+    <h4> Música Selecionada</h4>
+    <p> {{musicaSelecionada}}</p>
+
+    <p>Curtida: {{curtida}}</p>
+    <button (click)="incrementar()"> + </button>
+    <button (click)="decrementar()"> - </button>
+    
+    <button (click)="reproduzindoMusica()">
+        {{tocando  ? 'Pausar' : 'Reproduzir'}}
+    </button>
+    </div>
+}@else{
+
+    <p>Nenhuma música tocando</p>
+}
+
+<div class="adicionar">
+    <input
+    type="text" 
+    placeholder="Adicione uma nova música" 
+    [(ngModel)]="novaMusica">
+
+    <button [disabled]="novaMusica.trim() === ''" (click)="adicionarMusica()">
+    Adicionar
+    </button>
+
+
+</div>
