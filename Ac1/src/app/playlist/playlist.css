@@ -1,0 +1,72 @@
+h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+.contador {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.lista-musicas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+
+.musica {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: 1px solid #161515;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.musica.selecionada {
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+
+.musica-selecionada {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+
+.tocando {
+    background-color: rgb(144, 177, 238);
+}
+
+button {
+    margin: 5px;
+    padding: 7px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+
+.adicionar {
+    margin-top: 20px;
+}
+
+
+input {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
